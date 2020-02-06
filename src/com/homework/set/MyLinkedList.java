@@ -15,7 +15,7 @@ package com.homework.set;
 public class MyLinkedList<T extends Comparable<T>> {
     private Node<T> first;
     private Node<T> last;
-    int listSize;
+    private int listSize;
 
     static class Node<T extends Comparable<T>> {
         public Node<T> previous;

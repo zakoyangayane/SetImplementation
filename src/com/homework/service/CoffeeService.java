@@ -11,11 +11,11 @@ public class CoffeeService {
     public Coffee coffee6;
 
     public CoffeeService() {
-        coffee1 = Coffee.LATTE;
-        coffee2 = Coffee.ESPRESSO;
-        coffee3 = Coffee.CAPPUCCINO;
-        coffee4 = Coffee.ARABICA;
-        coffee5 = Coffee.LATTE;
-        coffee6 = Coffee.CAPPUCCINO;
+        coffee1 = new Coffee("Latte");
+        coffee2 = new Coffee("Espresso");
+        coffee3 = new Coffee("Cappuccino");
+        coffee4 = new Coffee("Arabica");
+        coffee5 = new Coffee("Latte");
+        coffee6 = new Coffee("Cappuccino");
     }
 }
