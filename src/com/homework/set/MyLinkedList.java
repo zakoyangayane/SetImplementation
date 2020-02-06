@@ -4,7 +4,7 @@ package com.homework.set;
  * MyLinkedList is an implementation in this application for helping creating the TreeSet
  * type of Set. It's not the current implementation of the LinkedList.
  * Here the elements of any type are kept in sorted order. And never a duplicate
- * can be requested to be added here, cause the TreeSet from where this type of objects is created,
+ * can be requested to be added here, cause the TreeSet from where this type of object is created,
  * doesn't call here if an element is already existing in the list here.
  * Any type of object assigned to these class should be extending Comparable interface.
  *
