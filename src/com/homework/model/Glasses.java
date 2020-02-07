@@ -5,7 +5,6 @@ import java.util.Objects;
 /**
  * The Glasses class creates an object which has a color, shape, and size.
  * In its turn the size is consisted of the length and width of the glass.
- * The shape is of Enum type, which can be square or rectangle.
  * This class is used in the current application for testing the implemented TreeSet,
  * where they'll be sorted by their colors in ascending order.
  *
@@ -13,9 +12,9 @@ import java.util.Objects;
  * @since 2020-02-07
  */
 public class Glasses implements Comparable<Glasses> {
-    private Enum<Shape> shape;
-    private Size size;
+    private String shape;
     private String color;
+    private Size size;
 
     static class Size implements Comparable<Size> {
         int length;
@@ -76,11 +75,7 @@ public class Glasses implements Comparable<Glasses> {
         }
     }
 
-    public enum Shape {
-        SQUARE, RECTANGLE
-    }
-
-    public Glasses(Enum<Shape> shape, String color, int length, int width) {
+    public Glasses(String shape, String color, int length, int width) {
         this.shape = shape;
         this.color = color;
         setSize(length, width);
@@ -94,11 +89,11 @@ public class Glasses implements Comparable<Glasses> {
         this.color = color;
     }
 
-    public Enum<Shape> getShape() {
+    public String getShape() {
         return shape;
     }
 
-    public void setShape(Enum<Shape> shape) {
+    public void setShape(String shape) {
         this.shape = shape;
     }
 
@@ -133,9 +128,9 @@ public class Glasses implements Comparable<Glasses> {
     @Override
     public String toString() {
         return "Glasses{" +
-                "shape=" + shape +
-                ", size=" + size +
+                "shape='" + shape + '\'' +
                 ", color='" + color + '\'' +
+                ", size=" + size +
                 '}';
     }
 }

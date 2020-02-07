@@ -45,7 +45,7 @@ public class Test {
 
         setOfGlasses.printElements();  //prints elements
         System.out.println("Size is " + setOfGlasses.getSize(setOfGlasses));  //size of the set
-        System.out.println(setOfGlasses.contains(glassesService.glasses5));  //containing the element
+        System.out.println(setOfGlasses.contains(glassesService.glasses1));  //containing the element
         setOfGlasses.remove(glassesService.glasses1);  //removes this element
         System.out.println("removed a glasses object");
         setOfGlasses.printElements();  //prints elements after removing
