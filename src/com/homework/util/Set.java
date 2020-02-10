@@ -1,4 +1,4 @@
-package com.homework.set;
+package com.homework.util;
 
 /**
  * The Set interface is created for making set of any kind of objects, to implement this interface

@@ -1,4 +1,4 @@
-package com.homework.set;
+package com.homework.util;
 
 /**
  * MyLinkedList is an implementation in this application for helping creating the TreeSet

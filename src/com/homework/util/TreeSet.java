@@ -1,4 +1,4 @@
-package com.homework.set;
+package com.homework.util;
 
 /**
  * The TreeSet implementation is done using the MyLinkedList class and the Set interface.
@@ -20,10 +20,7 @@ public class TreeSet<T extends Comparable<T>> implements Set<T> {
     /*adds the element to the set if it is not already present there and if it's not equal to null*/
     @Override
     public boolean add(T element) {
-        if (element == null) {
-            throw new NullPointerException("TreeSet doesn't allow null element");
-        }
-        if (!this.contains(element)) {
+        if (getWhetherNull(element) && !this.contains(element)) {
             this.elements.add(element);
             return true;
         }
@@ -33,10 +30,7 @@ public class TreeSet<T extends Comparable<T>> implements Set<T> {
     /*removes the current element from the set if it is present there*/
     @Override
     public boolean remove(T element) {
-        if (element == null) {
-            throw new NullPointerException("TreeSet doesn't contain null element");
-        }
-        if (this.contains(element)) {
+        if (getWhetherNull(element) && this.contains(element)) {
             this.elements.remove(element);
             return true;
         }
@@ -46,7 +40,7 @@ public class TreeSet<T extends Comparable<T>> implements Set<T> {
     /*checks whether the current element is included in the set or not*/
     @Override
     public boolean contains(T element) {
-        if (element == null) {
+        if (getWhetherNull(element) && element == null) {
             throw new NullPointerException("TreeSet doesn't contain null element");
         }
         return this.elements.contains(element);
@@ -64,6 +58,13 @@ public class TreeSet<T extends Comparable<T>> implements Set<T> {
     /*prints the elements of the list*/
     public void printElements() {
         this.elements.printInfo(this.elements);
+    }
+
+    public boolean getWhetherNull(T element) {
+        if (getWhetherNull(element)) {
+            return true;
+        }
+        return false;
     }
 
     @Override

@@ -6,7 +6,7 @@ import com.homework.model.Student;
 import com.homework.service.CoffeeService;
 import com.homework.service.GlassesService;
 import com.homework.service.StudentsService;
-import com.homework.set.TreeSet;
+import com.homework.util.TreeSet;
 
 public class Test {
     public static void main(String[] args) {
